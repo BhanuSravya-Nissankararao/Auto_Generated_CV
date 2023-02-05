@@ -1,0 +1,19 @@
+.all{
+    float: left;
+    background-color: yellow;
+    width: 30%;
+}
+.margin{
+    margin-left: 5%;
+}
+.mat{
+    text-indent: 2em;
+}
+.mat1{
+    color: gray;
+}
+hr{
+    margin-top: -1%;
+    margin-left: 32.5%;
+    margin-right: 10%;
+}
