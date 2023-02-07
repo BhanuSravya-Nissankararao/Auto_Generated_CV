@@ -12,48 +12,48 @@
     <div class="all">
         <div class="margin">
             <table>
-        <tr><td>Name:</td><td><input type="text" placeholder="name"></td></tr>
-        <tr><td>Email:</td><td> <input type="email" placeholder="e-mail"></td></tr>
-        <tr><td>Phone:</td><td> <input type="text" placeholder="phone"></td></tr>
-        <tr><td>Github: </td><td><input type="url" placeholder="github"></td></tr>
-        <tr><td>Linkedin:</td><td> <input type="url" placeholder="linkedin"></td></tr>
+        <tr><td>Name:</td><td><input id="Name" type="text" placeholder="name"></td></tr>
+        <tr><td>Email:</td><td> <input id="Email" type="email" placeholder="e-mail"></td></tr>
+        <tr><td>Phone:</td><td> <input id="Phone" type="text" placeholder="phone"></td></tr>
+        <tr><td>Github: </td><td><input id="Github" type="url" placeholder="github"></td></tr>
+        <tr><td>Linkedin:</td><td> <input id="Linked" type="url" placeholder="linkedin"></td></tr>
         </table>
         <!-- <fieldset><legend>Education</legend> -->
         <h2><b>Education-------------------------------</b></h2>
         <table>
-        <tr><td>Degree:</td><td><input type="text" placeholder="Degree"></td></tr>
-        <tr><td>College:</td><td><input type="text" placeholder="college"></td></tr>
-        <tr><td>Starting Year:</td><td><input type="texy" placeholder="joining year"></td></tr>
-        <tr><td>passing Year:</td><td><input type="text" placeholder="passing Year"></td></tr>
-        <tr><td>CGPA:</td><td><input type="text" placeholder="CGPA"></td></tr>
+        <tr><td>Degree:</td><td><input id="Degree" type="text" placeholder="Degree"></td></tr>
+        <tr><td>College:</td><td><input id="College" type="text" placeholder="college"></td></tr>
+        <tr><td>Starting Year:</td><td><input id="Startyear" type="texy" placeholder="joining year"></td></tr>
+        <tr><td>passing Year:</td><td><input id="Endyear" type="text" placeholder="passing Year"></td></tr>
+        <tr><td>CGPA:</td><td><input id="CGPA" type="text" placeholder="CGPA"></td></tr>
         </table>
         <!-- </fieldset>
         <fieldset><legend>Skills</legend> -->
             <table>
         <h2><b>Skills------------------------------------</b></h2>
         <tr><td>Skills:</td>
-        <td><textarea rows="5" cols="20" placeholder="eg:HTML,CSS"></textarea></td></tr>
+        <td><textarea rows="5" cols="20" placeholder="eg:HTML,CSS" id="Skills"></textarea></td></tr>
     </table>
         <!-- </fieldset>
         <fieldset><legend>Projects</legend> -->
             <table>
             <h2><b>Projects---------------------------------</b></h2>
-        <tr><td>Project:</td><td><input type="text" placeholder="project"></td></tr>
-        <tr><td>Description:</td><td><textarea rows="5" cols="20" placeholder="describe about project"></textarea></td></tr>
-            <tr><td>Link:</td><td><input type="text" placeholder="link"></td></tr>
+        <tr><td>Project:</td><td><input type="text" placeholder="project" id="Projectname"></td></tr>
+        <tr><td>Description:</td><td><textarea rows="5" cols="20" placeholder="describe about project" id="Projectdescription"></textarea></td></tr>
+            <tr><td>Link:</td><td><input type="text" placeholder="link" id="Projectlink"></td></tr>
         </table>
         <!-- </fieldset>
         <fieldset><legend>Experience</legend> -->
             <table>
             <h2><b>Experience-------------------------------</b></h2>
-            <tr><td>Company:</td><td><input type="text" placeholder="company"></td></tr>
-            <tr><td>Designation:</td><td><input type="text" placeholder="designation"></td></tr>
-            <tr><td>Duriation:</td><td><input type="text" placeholder="duriation"></td></tr>
-            <tr><td>Description:</td><td><textarea rows="5" cols="20" placeholder="describe about company"></textarea></td></tr>
+            <tr><td>Company:</td><td><input type="text" placeholder="company" id="Company"></td></tr>
+            <tr><td>Designation:</td><td><input type="text" placeholder="designation" id="Designation"></td></tr>
+            <tr><td>Duriation:</td><td><input type="text" placeholder="duriation" id="Duration"></td></tr>
+            <tr><td>Description:</td><td><textarea rows="5" cols="20" placeholder="describe about company" id="Description"></textarea></td></tr>
         <!-- </fieldset> -->
     </table>
         <br>
-        <input type="submit" value="submit" style="background-color: black;color: white;">
+        <button type="submit" style="background-color: black;color: white;" onclick="handleSubmit()">submit</button>
         <input type="reset" value="reset" style="background-color: black;color: white;">
         <input type="button" value="View & Print" style="background-color: black;color: white;">
         <!-- <br><br><br><br><br><br>
@@ -66,20 +66,35 @@
         <input type="button" value="print"> -->
     </div>
     </div>
+    </form>
     &nbsp;&nbsp;&nbsp;&nbsp;
     <div class="mat">
+        <center><div id="display-name" style="font-size: 30px;"></div>
+              <a id="display-email" style="font-size: 20px;color: skyblue;"></a>
+                <a id="display-phone" style="font-size: 20px;color: skyblue;"></a>
+                <a id="display-github" style="font-size: 20px;color: skyblue;"></a>
+                <a id="display-linked" style="font-size: 20px;color: skyblue;"></a></center>
         <h2 class="mat1"><b>Education</b></h2>
         <hr>
-        <br><br>
-        <h4>CGPA</h4><br>
+        <div style="text-indent: 2em;"><b><a id="display-college"></a></b></div>
+        <div style="text-indent: 2em;"><b><a id="display-degree"></a></b></div>
+        <div style="text-indent: 2em;"><a id="display-startyear"></a>
+        <a id="display-endyear"></a><br></div>
+        <div style="text-indent: 2em;"><a>CGPA:</a><a id="display-cgpa"></a></div>
         <h2 class="mat1"><b>Skills</b></h2>
-        <hr><br>
+        <hr><b><div id="display-skills"></div></b>
         <h2 class="mat1"><b>Project</b></h2>
-        <hr><br>
+        <hr><div><a id="display-projectname"></a></div>
+        <div><a id="display-projectdescription"></a></div>
+        <div><a id="display-projectlink" style="color: skyblue;"></a></div>
         <h2 class="mat1"><b>Experience</b></h2>
-        <hr><br><br>
+        <hr>
+        <div><b><a id="display-designation"></a></b></div>
+        <div id="display-company" class="mat1"></div>
+        <div id="display-duration"></div>
+        <div id="display-description"></div>
         <div style="text-indent: 28em;"><input type="button" value="print" ></div>
     </div>
-    </form>
+    <script src="./script.js"></script>
 </body>
 </html> 
