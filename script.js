@@ -1,6 +1,5 @@
 const form = document.querySelector("form");
 form.addEventListener("submit", handleSubmit);
-
 // import all the fields from the form.
 // eg.
 
@@ -85,16 +84,45 @@ function handleSubmit(e) {
   document.getElementById("display-description").innerHTML=description;
   document.getElementById("Description").value="";
 }
+function reset(){
+    document.getElementById("Name").value="";
+    document.getElementById("Email").value="";
+    document.getElementById("Phone").value="";
+    document.getElementById("Github").value="";
+    document.getElementById("Linked").value="";
+    document.getElementById("College").value="";
+    document.getElementById("Degree").value="";
+    document.getElementById("Startyear").value="";
+    document.getElementById("Endyear").value="";
+    document.getElementById("CGPA").value="";
+    document.getElementById("Skills").value="";
+    document.getElementById("Projectname").value="";
+    document.getElementById("Projectdescription").value="";
+    document.getElementById("Projectlink").value="";
+    document.getElementById("Company").value="";
+    document.getElementById("Designation").value="";
+    document.getElementById("Duration").value="";
+    document.getElementById("Description").value="";
+}
 
 function handleLeft() {
+  isdisabled=false;
   const left = document.querySelector(".left");
+  left.style.display = "none"; 
   const right = document.querySelector(".right");
+  right.style.width = "100%" ;
   const print = document.querySelector(".print");
+  print.style.display = "block";
   // write more codes here
 }
-function handlePrint() {
+function handlePrint(c) {
   const right = document.querySelector(".right");
+  right.style.width="initial";
   const left = document.querySelector(".left");
+  left.style.display="none";
   const print = document.querySelector(".print");
-  // write more codes here
+  print.style.display="none";
+  c.style.display='none';
+  Window.print();
+  
 }

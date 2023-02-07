@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <title>Auto Generated CV</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form>
+        <div class="left">
     <div class="all">
         <div class="margin">
             <table>
@@ -54,8 +55,8 @@
     </table>
         <br>
         <button type="submit" style="background-color: black;color: white;" onclick="handleSubmit()">submit</button>
-        <input type="reset" value="reset" style="background-color: black;color: white;">
-        <input type="button" value="View & Print" style="background-color: black;color: white;">
+        <input type="reset" value="reset" style="background-color: black;color: white;" onclick="reset()">
+        <button type="submit" value="View & Print" style="background-color: black;color: white;" onclick="handleLeft()">view & Print</button>
         <!-- <br><br><br><br><br><br>
         <h1><b>Education</b></h1>
         <br><br>
@@ -66,8 +67,10 @@
         <input type="button" value="print"> -->
     </div>
     </div>
+    </div>
     </form>
     &nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="right">
     <div class="mat">
         <center><div id="display-name" style="font-size: 30px;"></div>
               <a id="display-email" style="font-size: 20px;color: skyblue;"></a>
@@ -93,8 +96,11 @@
         <div id="display-company" class="mat1"></div>
         <div id="display-duration"></div>
         <div id="display-description"></div>
-        <div style="text-indent: 28em;"><input type="button" value="print" ></div>
+        <div style="text-indent: 40em;">.</div>
+        <!-- <div style="text-indent: 28em;"><input type="button" value="print" onclick="handlePrint()"></div> -->
     </div>
+    </div>
+    <center><button onclick="handlePrint(this)">Print</button></center>
     <script src="./script.js"></script>
 </body>
 </html> 
