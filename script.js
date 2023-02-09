@@ -115,14 +115,16 @@ function handleLeft() {
   print.style.display = "block";
   // write more codes here
 }
-function handlePrint(c) {
+function handlePrint() {
   const right = document.querySelector(".right");
-  right.style.width="initial";
+//   right.style.width="initial";
   const left = document.querySelector(".left");
-  left.style.display="none";
+//   left.style.display="none";
   const print = document.querySelector(".print");
-  print.style.display="none";
-  c.style.display='none';
+//   print.style.display="none";
   Window.print();
+  right.classList.add("reduced");
+  left.classList.remove("hidden");
+  print.classList.add("hidden");
   
 }
