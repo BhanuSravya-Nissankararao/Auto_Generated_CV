@@ -122,7 +122,7 @@ function handlePrint() {
 //   left.style.display="none";
   const print = document.querySelector(".print");
 //   print.style.display="none";
-  Window.print();
+  window.print();
   right.classList.add("reduced");
   left.classList.remove("hidden");
   print.classList.add("hidden");
